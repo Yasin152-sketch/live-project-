@@ -8,12 +8,16 @@
 img {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
+  width: 100%;
+  min-height: 100vh;
 }
 
 header {
@@ -50,7 +54,7 @@ nav .nav-links .menu-icon {
 
 .list-items ul {
   display: flex;
-  align-items: center;
+  justify-content: center;
   list-style: none;
 }
 
@@ -502,147 +506,202 @@ nav .nav-links .menu-icon {
   letter-spacing: 1.5px;
 }
 
-/* ================= MOBILE 480px ================= */
+/* ===== MOBILE RESPONSIVE (390px phones) ===== */
 
-@media (max-width: 480px) {
-  /* ---------- NAVBAR ---------- */
-
+@media (max-width: 390px) {
+  /* NAVBAR */
+  /* 
   nav {
     flex-direction: column;
-    align-items: center;
+    height: auto;
+    padding: 10px 0;
   }
 
   .list-items ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
 
-  .menu-icon {
-    display: block;
-  }
-
-  /* ---------- HERO SECTION ---------- */
-
-  .content-text {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .content-text img {
-    width: 150px;
-  }
-
-  .content-text h1 {
-    font-size: 22px;
-  }
-
-  .search-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .left-search,
-  .right-search {
-    width: 100%;
-  }
-
-  /* ---------- ORDER SECTION ---------- */
-
-  .order {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .order .card {
-    width: 100%;
-  }
-
-  /* ---------- COLLECTION SECTION ---------- */
-
-  .collection-card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .collection-card .card {
-    width: 100%;
-  }
-
-  .collections h1 {
-    font-size: 24px;
-  }
-
-  /* ---------- POPULAR LOCATIONS ---------- */
-
-  .popular-locations {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .box {
-    width: 100%;
-  }
-
-  /* ---------- APP SECTION ---------- */
-
-  .app {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .app-image img {
-    width: 100%;
-  }
-
-  .get-app {
-    padding: 20px;
-  }
-
-  .submit {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .submit input {
-    width: 100%;
-  }
-
-  .submit button {
-    width: 100%;
-  }
-
-  /* ---------- EXPLORE SECTION ---------- */
-
-  .explore-section {
-    padding: 20px;
-  }
-
-  .option button {
-    width: 100%;
+  .list-items ul li a {
     font-size: 14px;
+  } */
+
+  nav {
+    flex-direction: row;
   }
 
-  /* ---------- FOOTER ---------- */
-
-  .footer-top {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+  .list-items ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
   }
 
-  .footer-links {
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .column {
-    width: 100%;
-  }
-
-  .footer-bottom p {
+  .list-items ul li a {
     font-size: 12px;
-    text-align: center;
+  }
+    /* HERO SECTION */
+   .content-text img {
+      width: 180px;
+      height: auto;
+    }
+
+    .content-text h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .search-container {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .search-container .left-search,
+    .search-container .right-search {
+      width: 100%;
+      border: none;
+      padding: 6px 10px;
+    }
+
+    /* ORDER CARDS */
+
+    .order {
+      flex-direction: column;
+    }
+
+    .order .card {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .order .card a img {
+      height: 200px;
+    }
+
+    .order .card .content .heading {
+      font-size: 1.1rem;
+    }
+
+    .order .card .content .text {
+      font-size: 0.9rem;
+    }
+
+    /* COLLECTIONS */
+
+    .collections {
+      width: 90%;
+      margin: 40px auto;
+    }
+
+    .collections h1 {
+      font-size: 1.6rem;
+    }
+
+    .collections p {
+      font-size: 1rem;
+    }
+
+    .collection-card {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .collection-card .card {
+      width: 100%;
+      height: 250px;
+    }
+
+    /* POPULAR LOCATIONS */
+
+    .popular-locations {
+      flex-direction: column;
+    }
+
+    .popular-locations .box {
+      width: 100%;
+      margin: 8px 0;
+      height: auto;
+    }
+
+    .popular-locations .box .city {
+      font-size: 17px;
+    }
+
+    .popular-locations .box .places {
+      font-size: 14px;
+    }
+
+    /* APP SECTION */
+
+    .app {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .app .app-image {
+      width: 80%;
+      padding-top: 0;
+    }
+
+    .app .get-app {
+      width: 100%;
+      text-align: center;
+    }
+
+    .submit input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .submit button {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    /* APP STORE BUTTONS */
+
+    .app-store {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .app-store img {
+      width: 120px;
+    }
+
+    /* EXPLORE OPTIONS */
+
+    .option {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .option button {
+      font-size: 1rem;
+    }
+
+    /* FOOTER */
+
+    .footer-top {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .footer-links {
+      flex-direction: column;
+    }
+
+    .footer-links .column {
+      margin: 20px 0;
+    }
+
+    .footer-bottom {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
   }
 }
